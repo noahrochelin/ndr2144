@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Life satisfaction vs. GDP per capita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="card">
+
+    <h1>Self-reported life satisfaction vs. GDP per capita <span id="title-year">2025</span></h1>
+    <p class="subtitle">Self-reported life satisfaction is measured on a scale ranging from 0-10, where 10 is the highest possible life satisfaction. GDP per capita is adjusted for inflation and differences in living costs between countries.</p>
+
+    <div id="chart-area">
+      <div id="chart"></div>
+      <div id="country-panel"></div>
+    </div>
+
+    <div id="timeline">
+      <button id="play-button">▶</button>
+      <span>2011</span>
+      <input type="range" id="year-slider" min="2011" max="2025" value="2025">
+      <span>2025</span>
+    </div>
+
+    <p class="source"><b>Data source:</b> Wellbeing Research Centre (2026); Eurostat, OECD, IMF, and World Bank (2026) – <a href="https://ourworldindata.org/grapher/gdp-vs-happiness">Learn more about this data</a></p>
+    <p class="note"><b>Note:</b> GDP per capita is expressed in international-$ at 2021 prices. Where data for 2025 is unavailable, the value from the closest year between 2020 and 2024 is shown instead.</p>
+    <p class="note">OurWorldinData.org/happiness-and-life-satisfaction | CC BY</p>
+
+  </div>
+
+  <p class="credits">
+    Recreation of <a href="https://ourworldindata.org/grapher/gdp-vs-happiness">Our World in Data's chart</a>
+    (<a href="original.png">screenshot of the original</a>).
+    My additions: smooth transitions between years (circles glide, fade in and fade out),
+    and a side panel that keeps the clicked country's numbers visible.
+  </p>
+
+  <div id="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

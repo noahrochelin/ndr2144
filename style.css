@@ -1,0 +1,176 @@
+body {
+  font-family: "Lato", Arial, sans-serif;
+  color: #5b5b5b;
+  background: #ffffff;
+  margin: 0;
+  padding: 24px;
+}
+
+a {
+  color: inherit;
+}
+
+/* the white box around everything, like the original */
+#card {
+  width: 1000px;
+  border: 1px solid #e7e7e7;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #363636;
+  margin: 0 0 4px 0;
+}
+
+#title-year {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 18px;
+  color: #858585;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.35;
+  max-width: 820px;
+  margin: 0 0 12px 0;
+}
+
+/* chart + side panel */
+#chart-area {
+  position: relative;
+}
+
+#country-panel {
+  position: absolute;
+  right: 0;
+  top: 200px;
+  width: 140px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#country-panel h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #363636;
+  margin: 0 0 2px 0;
+}
+
+#country-panel p {
+  margin: 0 0 10px 0;
+}
+
+/* axes */
+.axis .tick line {
+  stroke: #dddddd;
+  stroke-dasharray: 3, 3;
+}
+
+.axis .domain {
+  display: none;
+}
+
+.axis text,
+.axis-title,
+.legend text {
+  font-size: 13px;
+  fill: #5b5b5b;
+}
+
+.legend-item {
+  cursor: pointer;
+}
+
+.country-label {
+  font-size: 13px;
+  pointer-events: none;
+  /* white outline so names stay readable on top of dots and grid lines */
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 3px;
+}
+
+/* timeline at the bottom */
+#timeline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  margin: 4px 0 16px 0;
+}
+
+#play-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 4px;
+  background: #f2f2f2;
+  color: #5b5b5b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#year-slider {
+  flex: 1;
+  accent-color: #8f8f8f;
+}
+
+/* source and notes */
+.source {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.note {
+  font-size: 12.5px;
+  margin: 4px 0;
+}
+
+.credits {
+  width: 1000px;
+  font-size: 13px;
+}
+
+/* hover box, styled like the original */
+#tooltip {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  min-width: 220px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+}
+
+.tt-head {
+  padding: 10px 14px;
+  background: #f7f7f7;
+}
+
+.tt-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #363636;
+}
+
+.tt-row {
+  padding: 8px 14px;
+  border-top: 1px solid #eeeeee;
+}
+
+.tt-label {
+  color: #858585;
+}
+
+.tt-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #363636;
+}
